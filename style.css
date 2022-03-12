@@ -1,0 +1,301 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*Start of styling*/
+
+/*Grid Layout*/
+.grid-container{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 6fr;
+
+}
+
+.sidebar{
+    background-color: #1992d4;
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+
+.header{
+    background-color: #ffffff;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.dashboard{
+    background-color: #e2e8f0;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.icon{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(245deg) brightness(103%) contrast(101%);
+}
+
+.sidebar{
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr;
+    box-shadow: 4px 4px 6px -2px grey;
+    z-index: 1;
+}
+.logo{
+    grid-row: 1/2 ;
+}
+
+.links{
+    grid-row: 2/3;
+}
+.settings{
+    grid-row: 3/4;
+}
+
+
+/*Sidebar Styling*/
+.logo{
+    display: flex;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.logo *{
+    height: 50px;
+}
+
+.logo img{
+    flex: 1 1 0%;
+}
+
+.logo h1{
+    flex: 3 1 0%;
+    line-height: 50px;
+    font-size: calc(1em + 1.2vw);
+    color: #ffffff;
+}
+
+
+.link-item{
+    display: flex;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.link-item *{
+    height: 30px;
+}
+
+.link-item img{
+    flex: 1 1 0%;
+}
+
+.link-item h1{
+    flex: 3 1 0%;
+    line-height: 30px;
+    font-size: calc(1em + .6vw);;
+    color: #ffffff;
+}
+
+
+.settings-link{
+    display: flex;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.settings-link *{
+    height: 30px;
+}
+
+.settings-link img{
+    flex: 1 1 0%;
+}
+
+.settings-link h1{
+    flex: 3 1 0%;
+    line-height: 30px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/*Header Styling*/
+.header{
+    padding: 10px 30px 15px 30px;
+    box-shadow: 0px 6px 6px -2px grey;
+    z-index: 1;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.top .search{
+    flex: 2 1 0%;
+    display: flex;
+    gap: 5px;
+    
+}
+
+.search input{
+    width: 70%;
+    height: 30px;
+    background-color: #e2e8f0;
+    border-radius: 15px;
+    border: none;
+    padding-left: 7px;
+}
+.top .profile{
+    flex: 1 1 0%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.profile h1{
+    line-height: 50px;
+}
+
+.avatar{
+    background-color: yellow;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+}
+
+.bottom > * {
+    flex: 1 1 0%;
+}
+
+.greeting{
+    display: flex;
+    gap: 25px;
+}
+
+.greeting .avatar{
+    height: 75px;
+    width: 75px;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.options button{
+    color: #ffffff;
+    background-color: #1992d4;
+    border: none;
+    font-size: 24px;
+    border-radius: 25px;
+    width: 120px;
+    padding: 10px 0;
+}
+
+/*Dashboard Styling*/
+.dashboard{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+    padding: 20px 4vw;
+}
+
+.projects{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .5fr repeat(3, 3fr);
+    gap: 15px;
+
+}
+
+.projects h1{
+    grid-column: 1/3;
+    font-size: 24px;
+    padding: 5px;
+
+}
+.announcements{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.trending{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.announcements , .trending{
+    display: grid;
+    grid-template-rows: .5fr  3fr;
+}
+
+.announcements h1, .trending h1{
+    grid-column: 1/2;
+    font-size: 24px;
+    padding: 5px;
+}
+
+
+
+.card{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 6px 6px -2px grey;;
+}
