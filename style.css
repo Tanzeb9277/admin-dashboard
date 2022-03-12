@@ -50,6 +50,10 @@ table {
 
 /*Start of styling*/
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 /*Grid Layout*/
 .grid-container{
     display: grid;
@@ -127,6 +131,11 @@ table {
     display: flex;
     padding: 10px 0;
     gap: 10px;
+}
+
+.link-item:hover, .settings-link:hover{
+    cursor: pointer;
+    filter: invert(30%) sepia(90%) saturate(1268%) hue-rotate(359deg) brightness(106%) contrast(106%);
 }
 
 .link-item *{
@@ -226,8 +235,8 @@ table {
 }
 
 .greeting .avatar{
-    height: 75px;
-    width: 75px;
+    height: 65px;
+    width: 65px;
 }
 
 .options{
@@ -240,10 +249,14 @@ table {
     color: #ffffff;
     background-color: #1992d4;
     border: none;
-    font-size: 24px;
+    font-size: 18px;
     border-radius: 25px;
-    width: 120px;
-    padding: 10px 0;
+    width: 100px;
+    padding: 9px 0;
+}
+
+.options button:hover{
+    background-color: #15c2f7;
 }
 
 /*Dashboard Styling*/
@@ -252,7 +265,7 @@ table {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 25px;
-    padding: 20px 4vw;
+    padding: 20px 4.5vw;
 }
 
 .projects{
@@ -286,12 +299,11 @@ table {
     grid-template-rows: .5fr  3fr;
 }
 
-.announcements h1, .trending h1{
+.announcements > h1, .trending > h1{
     grid-column: 1/2;
     font-size: 24px;
     padding: 5px;
 }
-
 
 
 .card{
@@ -299,3 +311,69 @@ table {
     border-radius: 15px;
     box-shadow: 0px 6px 6px -2px grey;;
 }
+
+/*Card Styling*/
+
+.projects .card{
+    padding: 15px;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    box-shadow: inset 5px 0em #ffd700;
+}
+
+.projects .card h1{
+    font-weight: 600;
+}
+
+.projects .card p{
+    width: 75%;
+    color: rgb(87, 87, 87);
+}
+
+.projects .card .icons{
+    grid-row: 2/3;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.announcements .card, .trending .card{
+    width: 80%;
+    padding: 10px 25px;
+}
+.announcements .card {
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+.announcements .card h1{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.announcements .card p{
+    color: rgb(87, 87, 87);
+}
+
+.announcements .card hr{
+        width: 100%;
+        height: 0.01px;
+}
+.trending .card{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr)
+}
+.account{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.account .text > *{
+    padding: 3px;
+}
+
+.account .text h1{
+    color: rgb(87, 87, 87);
+}
+
